@@ -1,0 +1,34 @@
+<div id="content">
+  <div *ngIf="restaurant" id="restaurant-detail">
+    <h1>{{ restaurant.name }}</h1>
+    <p>{{ restaurant.description }}</p>
+
+    <div *ngIf="displayMenuItems">
+      <h2>Items</h2>
+
+      <div
+        *ngFor="let menuItem of displayMenuItems"
+        (click)="selectMenuItem(menuItem)"
+        [class.selected]="menuItem === selectedMenuItem"
+        class="menu-item"
+      >
+        <div class="menu-item-image">
+          <img [src]="menuItem.image" alt="{{ menuItem.name }}" />
+        </div>
+        <div class="menu-item-details">
+          <h3>{{ menuItem.name }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <button
+      [disabled]="!selectedMenuItem"
+      (click)="onSubmit()"
+      [class.disabled]="!selectedMenuItem"
+      id="place-order-button"
+    >
+      Place Order
+    </button>
+  </div>
+</div>
+<div *ngIf="!restaurant">404 Error: not found</div>

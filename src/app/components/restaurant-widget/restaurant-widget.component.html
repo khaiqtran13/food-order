@@ -1,0 +1,11 @@
+<div id="content">
+  <h1>Choose Your Restaurant</h1>
+  <div id="restaurants">
+    <div *ngFor="let restaurant of restaurants" class="restaurant-card">
+      <img [src]="restaurant.image" alt="Restaurant Image" />
+      <h2>{{ restaurant.name }}</h2>
+      <p>{{ restaurant.description }}</p>
+      <button routerLink="restaurant/{{ restaurant.id }}">Order Now</button>
+    </div>
+  </div>
+</div>

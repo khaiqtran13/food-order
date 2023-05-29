@@ -1,0 +1,32 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Subway",
+      "description": "Subway sells sandwiches, salads, and wraps.",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Turkey Sandwich",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "id": 2,
+          "name": "Veggie Delight Sandwich",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "id": 3,
+          "name": "Chicken Sandwich",
+          "image": "https://via.placeholder.com/150"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rang De Indian Cuisine",
+      "description": "Rang De Indian Cuisine sells Indian food."
+    }
+  ],
+  "orders": []
+}
