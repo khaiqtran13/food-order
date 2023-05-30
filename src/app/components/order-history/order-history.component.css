@@ -1,0 +1,37 @@
+/* order-history.component.css */
+#content {
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #007bff;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.order-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.order-details h3 {
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.order-details p {
+  margin: 0;
+  color: #333;
+}

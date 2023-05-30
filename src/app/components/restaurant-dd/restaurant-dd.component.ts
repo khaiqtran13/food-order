@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from 'src/app/services/order.service';
 import { MenuItem, Order, Restaurant } from 'src/app/types';
+import { OrderConfirmationComponent } from '../order-confirmation/order-confirmation.component';
 
 interface DisplayMenuItem extends MenuItem {
   selected: boolean;
@@ -20,7 +22,8 @@ export class RestaurantDDComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private orderService: OrderService
+    private orderService: OrderService,
+    public dialog: MatDialog
   ) {}
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
@@ -56,6 +59,13 @@ export class RestaurantDDComponent {
       this.orderService
         .submitOrder(order)
         .subscribe((data) => console.log('==== orders', data));
+
+      this.dialog.open(OrderConfirmationComponent, {
+        data: order,
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        hasBackdrop: true,
+      });
     }
   }
 }

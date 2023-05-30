@@ -28,5 +28,32 @@
       "description": "Rang De Indian Cuisine sells Indian food."
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "restaurantId": 1,
+      "menuItems": [
+        {
+          "id": 1,
+          "name": "Turkey Sandwich",
+          "image": "https://via.placeholder.com/150",
+          "selected": false
+        }
+      ],
+      "customerId": 1,
+      "id": 1
+    },
+    {
+      "restaurantId": 1,
+      "menuItems": [
+        {
+          "id": 2,
+          "name": "Veggie Delight Sandwich",
+          "image": "https://via.placeholder.com/150",
+          "selected": false
+        }
+      ],
+      "customerId": 1,
+      "id": 2
+    }
+  ]
 }

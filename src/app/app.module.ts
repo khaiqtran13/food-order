@@ -12,6 +12,10 @@ import { RestaurantDDComponent } from './components/restaurant-dd/restaurant-dd.
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatDialogModule } from '@angular/material/dialog';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -21,6 +25,10 @@ const appRoutes: Routes = [
     path: 'restaurant/:id',
     component: RestaurantDDComponent,
   },
+  {
+    path: 'order-history',
+    component: OrderHistoryComponent,
+  },
 ];
 @NgModule({
   declarations: [
@@ -28,6 +36,8 @@ const appRoutes: Routes = [
     RestaurantWidgetComponent,
     HeaderComponent,
     RestaurantDDComponent,
+    OrderHistoryComponent,
+    OrderConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +47,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
