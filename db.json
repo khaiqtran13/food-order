@@ -25,7 +25,24 @@
     {
       "id": 2,
       "name": "Rang De Indian Cuisine",
-      "description": "Rang De Indian Cuisine sells Indian food."
+      "description": "Rang De Indian Cuisine sells Indian food.",
+      "menu": [
+        {
+          "id": 1,
+          "name": "Chicken Tikka Masala",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "id": 2,
+          "name": "Saag Paneer",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "id": 3,
+          "name": "Naan",
+          "image": "https://via.placeholder.com/150"
+        }
+      ]
     }
   ],
   "orders": [
@@ -39,21 +56,11 @@
           "selected": false
         }
       ],
+      "restaurantName": "Subway",
       "customerId": 1,
-      "id": 1
-    },
-    {
-      "restaurantId": 1,
-      "menuItems": [
-        {
-          "id": 2,
-          "name": "Veggie Delight Sandwich",
-          "image": "https://via.placeholder.com/150",
-          "selected": false
-        }
-      ],
-      "customerId": 1,
-      "id": 2
+      "id": 1,
+      "customerName": "Khai Tran",
+      "date": "2023-05-30T18:53:38.965Z"
     }
   ]
 }

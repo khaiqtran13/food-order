@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Order } from 'src/app/types';
 
 @Component({
@@ -10,11 +10,14 @@ import { Order } from 'src/app/types';
 export class OrderConfirmationComponent {
   order: Order;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Order) {
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: Order,
+    public dialogRef: MatDialogRef<OrderConfirmationComponent>
+  ) {
     this.order = data;
   }
 
-  navigateHome() {
-    window.location.href = '/';
+  close() {
+    this.dialogRef.close();
   }
 }

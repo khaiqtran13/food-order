@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderService } from 'src/app/services/order.service';
 import { Restaurant } from 'src/app/types';
 
 @Component({
@@ -7,20 +8,13 @@ import { Restaurant } from 'src/app/types';
   styleUrls: ['./restaurant-widget.component.css'],
 })
 export class RestaurantWidgetComponent {
-  restaurants: Restaurant[] = [
-    {
-      name: 'McDonalds',
-      image: 'https://via.placeholder.com/150',
-      description: 'Fast food',
-      id: 1,
-    },
-    {
-      name: 'Burger King',
-      image: 'https://via.placeholder.com/150',
-      description: 'Fast food',
-      id: 2,
-    },
-  ];
+  restaurants: Restaurant[];
 
-  constructor() {}
+  constructor(private orderService: OrderService) {}
+
+  ngOnInit() {
+    this.orderService.getAllRestaurants().subscribe((data) => {
+      this.restaurants = data;
+    });
+  }
 }

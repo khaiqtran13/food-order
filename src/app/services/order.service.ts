@@ -11,8 +11,13 @@ export class OrderService {
 
   constructor(private http: HttpClient) {}
 
-  getRestaurantMenu(id: string): Observable<Restaurant> {
+  getRestaurantInfo(id: string): Observable<Restaurant> {
     return this.http.get<Restaurant>(this.apiURL + 'restaurants/' + id);
+  }
+
+  // TODO: do not need the menu
+  getAllRestaurants(): Observable<Restaurant[]> {
+    return this.http.get<Restaurant[]>(this.apiURL + 'restaurants/');
   }
 
   submitOrder(order: Order): Observable<Order> {

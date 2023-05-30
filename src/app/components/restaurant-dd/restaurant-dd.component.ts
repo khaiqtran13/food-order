@@ -29,7 +29,7 @@ export class RestaurantDDComponent {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       if (id) {
-        this.orderService.getRestaurantMenu(id).subscribe((data) => {
+        this.orderService.getRestaurantInfo(id).subscribe((data) => {
           console.log(data);
           this.restaurant = data;
           this.displayMenuItems = (data as any).menu?.map(
@@ -53,9 +53,13 @@ export class RestaurantDDComponent {
       const order: Order = {
         restaurantId: this.restaurant.id,
         menuItems: [this.selectedMenuItem],
+        restaurantName: this.restaurant.name,
         customerId: 1,
         id: 0,
+        customerName: 'Khai Tran',
+        date: new Date().toISOString(),
       };
+
       this.orderService
         .submitOrder(order)
         .subscribe((data) => console.log('==== orders', data));

@@ -14,7 +14,10 @@ export interface MenuItem {
 
 export interface Order {
   id: number;
+  date?: string;
   restaurantId: number;
+  restaurantName?: string;
+  restaurantImage?: string;
   menuItems: MenuItem[];
   customerName?: string;
   customerId: number;
