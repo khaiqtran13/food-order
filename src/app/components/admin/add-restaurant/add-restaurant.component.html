@@ -1,0 +1,71 @@
+<div id="add-restaurant" class="add-restaurant">
+  <h2>Add New Restaurant</h2>
+  <form (ngSubmit)="addRestaurant()" class="restaurant-form">
+    <div class="form-group">
+      <label for="name">Restaurant Name:</label>
+      <input
+        id="name"
+        [(ngModel)]="newRestaurant.name"
+        name="name"
+        required
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        [(ngModel)]="newRestaurant.description"
+        name="description"
+        class="form-control"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="image">Restaurant Image URL:</label>
+      <input
+        id="image"
+        [(ngModel)]="newRestaurant.image"
+        name="image"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group" *ngFor="let menuItem of menuItems; let i = index">
+      <div style="display: flex; align-items: center">
+        <h4>Menu Item {{ i + 1 }}</h4>
+        <button class="delete-btn" (click)="deleteMenuItem(i)">Delete</button>
+      </div>
+      <label for="menuItemName">Menu Item Name:</label>
+      <input
+        type="text"
+        id="menuItemName"
+        [(ngModel)]="menuItem.name"
+        [name]="'menuItemImage' + i"
+        required
+        class="form-control"
+      />
+      <label for="menuItemImage" class="form-control" name="menuItemImage"
+        >Menu Item Imge URL:</label
+      >
+      <input
+        type="text"
+        [(ngModel)]="menuItem.image"
+        name="menuItemImage"
+        [name]="'menuItemImage' + i"
+        class="form-control"
+      />
+    </div>
+    <button (click)="addMenuItem()" type="button" class="btn-add-menu-item">
+      Add Menu Item
+    </button>
+
+    <button
+      type="submit"
+      class="btn-submit"
+      [disabled]="!isValidForm()"
+      [class.disabled]="!isValidForm()"
+      (ngSubmit)="addRestaurant()"
+    >
+      Add Restaurant
+    </button>
+  </form>
+</div>

@@ -43,24 +43,40 @@
           "image": "https://via.placeholder.com/150"
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "McDonalds",
+      "description": "is actually commercial real-estate ",
+      "image": "",
+      "menu": [
+        {
+          "name": "Big Mac"
+        },
+        {
+          "id": 2,
+          "name": "Junior Chicken",
+          "image": ""
+        }
+      ]
     }
   ],
   "orders": [
     {
-      "restaurantId": 1,
+      "restaurantId": 4,
       "menuItems": [
         {
-          "id": 1,
-          "name": "Turkey Sandwich",
-          "image": "https://via.placeholder.com/150",
+          "id": 2,
+          "name": "Junior Chicken",
+          "image": "",
           "selected": false
         }
       ],
-      "restaurantName": "Subway",
+      "restaurantName": "McDonalds",
       "customerId": 1,
-      "id": 1,
+      "id": 2,
       "customerName": "Khai Tran",
-      "date": "2023-05-30T18:53:38.965Z"
+      "date": "2023-05-31T16:04:41.703Z"
     }
   ]
 }

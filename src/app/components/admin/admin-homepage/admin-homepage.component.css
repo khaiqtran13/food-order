@@ -1,0 +1,19 @@
+#admin-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.admin-section {
+  margin: 20px;
+}
+
+.order-card {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+button {
+  margin-top: 10px;
+}

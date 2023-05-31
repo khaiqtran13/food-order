@@ -24,6 +24,7 @@ export class OrderService {
     return this.http.post<Order>(this.apiURL + 'orders/', order);
   }
 
+  // TODO: should just be user's orders
   getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>(this.apiURL + 'orders/');
   }

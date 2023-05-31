@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
+
+.add-restaurant {
+  font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.restaurant-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  margin-left: 15px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b22234;
+}
+
+.btn-add-menu-item {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-menu-item:hover {
+  background-color: #0056b3;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn:disabled,
+.btn-add-menu-item:disabled,
+.btn-submit:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.delete-btn:disabled:hover,
+.btn-add-menu-item:disabled:hover,
+.btn-submit:disabled:hover {
+  background-color: #bbb;
+  transform: none;
+  box-shadow: none;
+}

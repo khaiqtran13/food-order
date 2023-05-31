@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+import { AdminHomepageComponent } from './components/admin/admin-homepage/admin-homepage.component';
+import { AddRestaurantComponent } from './components/admin/add-restaurant/add-restaurant.component';
+import { ManageOrdersComponent } from './components/admin/manage-orders/manage-orders.component';
 
 const appRoutes: Routes = [
   {
@@ -29,6 +32,10 @@ const appRoutes: Routes = [
     path: 'order-history',
     component: OrderHistoryComponent,
   },
+  {
+    path: 'admin',
+    component: AdminHomepageComponent,
+  },
 ];
 @NgModule({
   declarations: [
@@ -38,6 +45,9 @@ const appRoutes: Routes = [
     RestaurantDDComponent,
     OrderHistoryComponent,
     OrderConfirmationComponent,
+    AdminHomepageComponent,
+    AddRestaurantComponent,
+    ManageOrdersComponent,
   ],
   imports: [
     BrowserModule,
