@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin.service';
 import { MenuItem, Restaurant } from 'src/app/types';
 
@@ -15,17 +16,16 @@ export class AddRestaurantComponent {
     image: '',
     menu: [],
   };
-  menuItems: MenuItem[] = [{} as MenuItem];
+  menuItems: MenuItem[] = [];
 
-  constructor(private adminService: AdminService) {}
+  constructor(private adminService: AdminService, private router: Router) {}
 
   addRestaurant() {
     this.newRestaurant.menu = this.menuItems;
-    console.log(this.newRestaurant);
-    console.log('adding restaurant');
     this.adminService.addNewRestaurant(this.newRestaurant).subscribe((res) => {
       console.log(res);
     });
+    this.router.navigate(['/admin']);
   }
 
   deleteMenuItem(index: number): void {
@@ -33,8 +33,11 @@ export class AddRestaurantComponent {
   }
 
   addMenuItem(): void {
-    const newMenuItem: MenuItem = // TODO: this ID logic is flawed
-      { id: this.menuItems.length + 1, name: '', image: '' } as MenuItem;
+    const newMenuItem: MenuItem = {
+      id: this.menuItems.length + 1,
+      name: '',
+      image: '',
+    } as MenuItem;
 
     this.menuItems = [...this.menuItems, newMenuItem];
   }
