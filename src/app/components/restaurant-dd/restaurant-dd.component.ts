@@ -30,7 +30,6 @@ export class RestaurantDDComponent {
       const id = params.get('id');
       if (id) {
         this.orderService.getRestaurantInfo(id).subscribe((data) => {
-          console.log(data);
           this.restaurant = data;
           this.displayMenuItems = (data as any).menu?.map(
             (menuItem: MenuItem) => ({

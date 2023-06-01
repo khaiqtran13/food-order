@@ -70,6 +70,10 @@ body {
   cursor: pointer;
 }
 
+.restaurant-card button:hover {
+  background-color: #0069d9;
+}
+
 @media screen and (min-width: 768px) {
   .restaurant-card {
     width: calc((100% - 60px) / 3);

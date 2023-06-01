@@ -21,4 +21,17 @@ export class AdminService {
   deleteOrder(orderID: number): Observable<Order> {
     return this.http.delete<Order>(this.apiURL + 'orders/' + orderID);
   }
+
+  deleteRestaurant(restaurantID: number): Observable<Restaurant> {
+    return this.http.delete<Restaurant>(
+      this.apiURL + 'restaurants/' + restaurantID
+    );
+  }
+
+  updateRestaurant(restaurant: Restaurant): Observable<Restaurant> {
+    return this.http.put<Restaurant>(
+      this.apiURL + 'restaurants/' + restaurant.id,
+      restaurant
+    );
+  }
 }

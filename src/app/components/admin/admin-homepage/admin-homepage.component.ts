@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './admin-homepage.component.html',
   styleUrls: ['./admin-homepage.component.css'],
 })
-export class AdminHomepageComponent {}
+export class AdminHomepageComponent {
+  actions = ['Manage Orders', 'Add Restaurant', 'Manage Restaurants'];
+  expandedIndex = 2;
+}
