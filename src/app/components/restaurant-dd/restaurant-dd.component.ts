@@ -53,6 +53,7 @@ export class RestaurantDDComponent {
         restaurantId: this.restaurant.id,
         menuItems: [this.selectedMenuItem],
         restaurantName: this.restaurant.name,
+        restaurantImage: this.restaurant.image,
         customerId: 1,
         id: 0,
         customerName: 'Khai Tran',

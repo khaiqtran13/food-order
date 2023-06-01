@@ -1,0 +1,51 @@
+#restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.restaurant-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.restaurant-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.restaurant-card h2 {
+  margin: 10px 0;
+}
+
+.restaurant-card p {
+  margin: 10px 0;
+}
+
+.restaurant-card button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restaurant-card button:hover {
+  background-color: #0069d9;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-card {
+    width: calc((100% - 60px) / 3);
+  }
+}
