@@ -57,7 +57,12 @@ export class RestaurantDDComponent {
         customerId: 1,
         id: 0,
         customerName: 'Khai Tran',
-        date: new Date().toISOString(),
+        date: new Date().toLocaleString('en-US', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        }),
       };
 
       this.orderService
